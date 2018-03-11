@@ -6,5 +6,6 @@ phases:
       - mvn package
 artifacts:
   files:
-    - target/my-web-app.war
+    - '**/*'
+    base-directory: 'target/my-web-app'
   discard-paths: yes
