@@ -2,10 +2,8 @@ version: 0.2
 phases:
   post_build:
     commands:
-      - 'echo Build completed on `date`'
       - 'mvn package'
+      - 'mv target/my-web-app.war my-web-app.war'
 artifacts:
   files:
-    - '**/*'
-base-directory: target/my-web-app
-discard-paths: yes
+    - my-web-app.war
